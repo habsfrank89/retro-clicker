@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Silicon 198X - PC Terminal</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Fullscreen CRT Monitor Frame -->
+  <div class="crt-monitor">
+    
+    <!-- Top System Header -->
+    <header class="system-bar">
+      <span>SYSTEM: ONLINE (60Hz)</span>
+      <span id="level-display">LVL: 1</span>
+      <span id="xp-display">XP: 0/100</span>
+      <span id="class-display">CLASS: ARCADE CHAMP</span>
+      <span id="clock-display">00:00:00</span>
+    </header>
+
+    <!-- 3-Column Desktop Grid -->
+    <main class="desktop-grid">
+      
+      <!-- LEFT: The Soldering Station (Active Play) -->
+      <section class="panel active-panel">
+        <h2>[ STATION ]</h2>
+        <div class="currency-box">
+          <div class="big-number" id="bits-display">0</div>
+          <div class="sub-text">BITS ACCUMULATED</div>
+          <div class="rate-text"><span id="bps-display">0.0</span> BITS / SEC</div>
+        </div>
+
+        <button id="click-btn" class="solder-btn">
+          [ SOLDER ]<br>
+          <small>(or press SPACE)</small>
+        </button>
+
+        <!-- Buy Multiplier Toggles (PC Essential) -->
+        <div class="buy-modes">
+          <span>BUY AMOUNT:</span>
+          <button class="mode-btn active" data-amount="1">1x</button>
+          <button class="mode-btn" data-amount="10">10x</button>
+          <button class="mode-btn" data-amount="100">100x</button>
+        </div>
+      </section>
+
+      <!-- CENTER: Hardware Rack (Visual Upgrades) -->
+      <section class="panel inventory-panel">
+        <h2>[ HARDWARE INVENTORY ]</h2>
+        <div id="upgrades-list" class="scrollable-list">
+          <!-- Upgrades inject here -->
+        </div>
+      </section>
+
+      <!-- RIGHT: Terminal Logs & Skill Tree -->
+      <section class="panel log-panel">
+        <h2>[ SYSTEM LOGS ]</h2>
+        <div id="terminal-log" class="terminal-box">
+          <p>> BIOS LOADED...</p>
+          <p>> WORKSTATION INITIALIZED...</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
